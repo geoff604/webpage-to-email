@@ -1,0 +1,20 @@
+Below are the bookmarklets that allow sending your current web page link in Google Chrome to an email address.
+
+Before using, replace youremail@gmail.com with your gmail address (optional) and
+replace youremail2@gmail.com with the address you want to send the email to.
+
+Then create a bookmark in Chrome's Bookmark Bar with the desired code (e.g. the line that starts with "javascript").
+
+
+
+Version of Bookmarklet that auto closes window:
+
+javascript:(function(){var t = document.title.trim(); var ind = t.indexOf("- youremail@gmail.com"); var ts = ind > 0 ? t.substring(0,ind) : t; var te = encodeURIComponent(ts); var n = encodeURIComponent(ts+"\n"+"\n"+top.document.location.href); var w = window.open("mailto:youremail2@gmail.com?subject="+te+"&body="+n,"_blank","toolbar=0,location=0,menubar=0,height=348,width=840"); setTimeout(()=>{w.close();}, 1000);})(); void(0);
+
+
+
+
+Version of Bookmarklet that keeps window open:
+
+javascript:(function(){var t = document.title.trim(); var ind = t.indexOf("- youremail@gmail.com"); var ts = ind > 0 ? t.substring(0,ind) : t; var te = encodeURIComponent(ts); var n = encodeURIComponent(ts+"\n"+"\n"+top.document.location.href); var w = window.open("mailto:youremail2@gmail.com?subject="+te+"&body="+n,"_blank","toolbar=0,location=0,menubar=0,height=348,width=840"); })(); void(0);
+

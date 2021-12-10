@@ -8,3 +8,8 @@ Before using, replace youremail@gmail.com with your gmail address (optional) and
 replace youremail2@gmail.com with the address you want to send the email to.
 
 Then create a bookmark in Chrome's Bookmark Bar with the desired code (e.g. the line that starts with "javascript").
+
+Instructions and a step by step guide are in the following Youtube tutorial:
+
+How to Send The Current Webpage to Your Email in Google Chrome using webpage-to-email - YouTube
+https://www.youtube.com/watch?v=oprVrMxrEhg

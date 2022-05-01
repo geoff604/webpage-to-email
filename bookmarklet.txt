@@ -9,12 +9,12 @@ Then create a bookmark in Chrome's Bookmark Bar with the desired code (e.g. the 
 
 Version of Bookmarklet that auto closes window:
 
-javascript:(function(){var t = document.title.trim(); var ind = t.indexOf("- youremail@gmail.com"); var ts = ind > 0 ? t.substring(0,ind) : t; var te = encodeURIComponent(ts); var n = encodeURIComponent(ts+"\n"+"\n"+top.document.location.href); var w = window.open("mailto:youremail2@gmail.com?subject="+te+"&body="+n,"_blank","toolbar=0,location=0,menubar=0,height=348,width=840"); setTimeout(()=>{w.close();}, 1000);})(); void(0);
+javascript:(function(){var t = document.title.trim(); var ind = t.indexOf("- youremail@gmail.com"); var ts = ind > 0 ? t.substring(0,ind) : t; var te = encodeURIComponent(ts); var sel = window.getSelection().toString().trim(); if (sel.length > 0) {sel = "\n\n" + sel + "\n";} var n = encodeURIComponent(ts+"\n"+"\n"+top.document.location.href+sel); var w = window.open("mailto:youremail2@gmail.com?subject="+te+"&body="+n,"_blank","toolbar=0,location=0,menubar=0,height=348,width=840"); setTimeout(()=>{w.close();}, 1000);})(); void(0);
 
 
 
 
 Version of Bookmarklet that keeps window open:
 
-javascript:(function(){var t = document.title.trim(); var ind = t.indexOf("- youremail@gmail.com"); var ts = ind > 0 ? t.substring(0,ind) : t; var te = encodeURIComponent(ts); var n = encodeURIComponent(ts+"\n"+"\n"+top.document.location.href); var w = window.open("mailto:youremail2@gmail.com?subject="+te+"&body="+n,"_blank","toolbar=0,location=0,menubar=0,height=348,width=840"); })(); void(0);
+javascript:(function(){var t = document.title.trim(); var ind = t.indexOf("- youremail@gmail.com"); var ts = ind > 0 ? t.substring(0,ind) : t; var te = encodeURIComponent(ts); var sel = window.getSelection().toString().trim(); if (sel.length > 0) {sel = "\n\n" + sel + "\n";} var n = encodeURIComponent(ts+"\n"+"\n"+top.document.location.href+sel); var w = window.open("mailto:youremail2@gmail.com?subject="+te+"&body="+n,"_blank","toolbar=0,location=0,menubar=0,height=348,width=840"); })(); void(0);
 
